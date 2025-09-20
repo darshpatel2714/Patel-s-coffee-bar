@@ -1,0 +1,201 @@
+/* ------------------------------
+   General Styles
+------------------------------ */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdf6e3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #4b3832;
+}
+
+a {
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+/* ------------------------------
+   Header Styles
+------------------------------ */
+header {
+    background: #6b4226;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+/* ------------------------------
+   Menu Page Styles
+------------------------------ */
+h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #8b5e3c;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.coffee-card {
+    background: #fff8f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.coffee-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.coffee-card p {
+    font-size: 1.1rem;
+    margin: 0 0 15px 0;
+}
+
+.coffee-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    background: #6b4226;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #8b5e3c;
+}
+
+.secondary {
+    background: #d9a066;
+    margin: 10px;
+}
+
+.secondary:hover {
+    background: #c57c3f;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+/* ------------------------------
+   Order Page Styles
+------------------------------ */
+.order-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.order-card {
+    background: #fff8f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.order-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.order-card p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.order-summary {
+    margin: 20px 0;
+}
+
+.order-summary h2 {
+    color: #6b4226;
+}
+
+.empty-order {
+    font-size: 1.2rem;
+    color: #a0522d;
+    margin: 40px 0;
+}
+
+/* ------------------------------
+   Checkout Page Styles
+------------------------------ */
+.checkout-container {
+    background: #fff8f0;
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.checkout-container h2 {
+    color: #6b4226;
+    margin: 15px 0;
+}
+
+.checkout-container p {
+    margin: 10px 0;
+}
+
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+@media screen and (max-width: 768px) {
+    .menu-grid, .order-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coffee-card, .order-card {
+        width: 80%;
+    }
+
+    .checkout-container {
+        width: 90%;
+        padding: 30px;
+    }
+}

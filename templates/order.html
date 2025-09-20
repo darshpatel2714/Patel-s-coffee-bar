@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Order - Patel's Coffee Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>☕ Your Order</h1>
+</header>
+
+<main>
+    {% if order.items %}
+    <div class="order-container">
+        {% for item in order.items %}
+        <div class="order-card">
+            <h3>{{ item.name }}</h3>
+            <p>Price: ₹{{ item.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="order-summary">
+        <h2>Total: ₹{{ order.total() }}</h2>
+        <a href="{{ url_for('checkout') }}" class="btn">Proceed to Checkout</a>
+    </div>
+    {% else %}
+    <p class="empty-order">Your order is empty ☹</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="btn secondary">Back to Menu</a>
+</main>
+</body>
+</html>

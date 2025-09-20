@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout - Patel's Coffee Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <h1>✅ Order Confirmed!</h1>
+</header>
+
+<main>
+    <div class="checkout-container">
+        <p>Thank you for your order ☕</p>
+        <h2>Total Paid: ₹{{ total }}</h2>
+        <p>We hope you enjoy your coffee!</p>
+        <a href="{{ url_for('index') }}" class="btn">Back to Menu</a>
+    </div>
+</main>
+</body>
+</html>

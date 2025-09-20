@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patel's Coffee Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>☕ Patel's Coffee Bar</h1>
+        <p>Your daily dose of happiness</p>
+    </header>
+
+    <main>
+        <h2>Menu</h2>
+        <div class="menu-grid">
+            {% for coffee in menu %}
+            <div class="coffee-card">
+    <img src="{{ url_for('static', filename='images/' ~ coffee.image) }}" alt="{{ coffee.name }}">
+    <h3>{{ coffee.name }}</h3>
+    <p>₹{{ coffee.price }}</p>
+    <a href="{{ url_for('add_item', item_id=loop.index0) }}" class="btn">Add to Order</a>
+</div>
+            {% endfor %}
+        </div>
+        <div class="links">
+            <a href="{{ url_for('show_order') }}" class="btn secondary">View Order</a>
+            <a href="{{ url_for('checkout') }}" class="btn secondary">Checkout</a>
+        </div>
+    </main>
+</body>
+</html>
