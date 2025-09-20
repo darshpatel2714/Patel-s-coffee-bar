@@ -33,19 +33,25 @@ Users can view the menu, add coffee items to their order, and checkout.
 ---
 
 ## 📂 Project Structure
-
+```bash
 Patel's coffee bar/
 │
-├── app.py # Main Flask application
-├── templates/
-│ ├── index.html # Menu page
-│ ├── order.html # View order page
-│ └── checkout.html # Checkout page
-├── static/
-│ ├── css/
-│ │ └── style.css # Stylesheet
-│ └── images/ # Coffee images
-└── README.md
+├── app.py                 # Main Flask application
+├── templates/             # HTML templates
+│   ├── index.html         # Menu page
+│   ├── order.html         # View order page
+│   └── checkout.html      # Checkout page
+├── static/                # Static files
+│   ├── css/
+│   │   └── style.css      # Stylesheet for all pages
+│   └── images/            # Coffee images
+│       ├── c1.jpg
+│       ├── c2.jpg
+│       ├── c3.jpg
+│       └── c4.jpg
+├── .gitignore             # Git ignore file
+└── README.md              # Project README
+```
 
 ---
 ## 📸 Screenshots
